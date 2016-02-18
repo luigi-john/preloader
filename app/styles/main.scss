@@ -1,0 +1,71 @@
+// bower:scss
+// endbower
+
+.boxLoading {
+  padding: 5px;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  background: #424242;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 50%;
+  animation: animate 0.5s linear infinite;
+}
+.shadow {
+  content: '';
+  width: 70px;
+  height: 5px;
+  background: #000;
+  opacity: 0.1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 110px;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  animation: shadow 0.5s linear infinite;
+}
+svg {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+@keyframes animate {
+  25% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(20px) scale(1, .9);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes shadow {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1);
+  }
+}
+body,
+html {
+  background: #00acc1;
+  overflow: hidden;
+  height: 100%;
+}

@@ -1,0 +1,135 @@
+@keyframes ball {
+   0% {
+    transform: translate(0, 0);
+   }
+   5% {
+     transform: translate(20px, -12px);
+   }
+   10% {
+     transform: translate(30px, -10px);
+   }
+   17% {
+    transform: translate(40px, -22px);
+  }
+  20% {
+    transform: translate(50px, -20px);
+  }
+  27% {
+    transform: translate(60px, -32px);
+  }
+  30% {
+    transform: translate(70px, -30px);
+  }
+  37% {
+    transform: translate(80px, -42px);
+  }
+  40% {
+    transform: translate(90px, -40px);
+  }
+  50% {
+    transform: translate(90px, 0);
+  }
+  57% {
+    transform: translate(80px, -12px);
+  }
+  60% {
+    transform: translate(70px, -10px);
+  }
+  67% {
+    transform: translate(60px, -22px);
+  }
+  70% {
+    transform: translate(50px, -20px);
+  }
+  77% {
+    transform: translate(40px, -32px);
+  }
+  80% {
+    transform: translate(30px, -30px);
+  }
+  87% {
+    transform: translate(20px, -42px);
+  }
+  90% {
+    transform: translate(0, -40px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes barUp1 {
+  0% {
+    transform: scale(1, .2);
+  }
+  40% {
+    transform: scale(1, .2);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  90% {
+    transform: scale(1,1);
+  }
+  100% {
+    transform: scale(1,.2);
+  }
+}
+@keyframes barUp2 {
+  0% {
+    transform: scale(1, .4);
+  }
+  40% {
+    transform: scale(1, .4);
+  }
+  50% {
+    transform: scale(1, .8);
+  }
+  90% {
+    transform: scale(1, .8);
+  }
+  100% {
+    transform: scale(1, .4);
+  }
+}
+@keyframes barUp3 {
+  0% {
+    transform: scale(1, .6);
+  }
+  100% {
+    transform: scale(1, .6);
+  }
+}
+@keyframes barUp4 {
+  0% {
+    transform: scale(1, .8);
+  }
+  40% {
+    transform: scale(1, .8);
+  }
+  50% {
+    transform: scale(1, .4);
+  }
+  90% {
+    transform: scale(1, .4);
+  }
+  100% {
+    transform: scale(1, .8);
+  }
+}
+@keyframes barUp5 {
+  0% {
+    transform: scale(1, 1);
+  }
+  40% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, .2);
+  }
+  90% {
+    transform: scale(1, .2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
