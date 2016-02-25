@@ -1,0 +1,248 @@
+.component {
+    position: relative;
+    z-index: 1;
+    width: 300px;
+    height: 500px;
+    margin: 0 auto
+}
+
+.morh_button {
+    fill: #fff;
+}
+
+.button {
+    font-weight: bold;
+    position: absolute;
+    bottom: 4px;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 60px;
+    padding: 0;
+    text-align: center;
+    color: #00a7e7;
+    background: none;
+    transition: opacity 0.3s;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+    &:hover, &:focus {
+        outline: none;
+        color: #048abd;
+    }
+}
+
+.button--listen {
+    pointer-events: none;
+}
+
+.button--close {
+    z-index: 10;
+    top: 0px;
+    right: 0px;
+    left: auto;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    color: #fff;
+
+    &:hover, &:hover {
+        color:#ddd;
+    }
+}
+
+.button--hidden {
+    pointer-events: none;
+    opacity: 0;
+}
+
+
+.button__content {
+    position: absolute;
+    opacity: 0;
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+.button__content--start {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.2em;
+    text-indent: 1px;
+    letter-spacing: 1px;
+    transform: translate3d(0, -25px, 0);
+    transition-timing-function: cubic-bezier(0.8, -0.6, 0.2, 1);
+}
+
+.button__content--listen {
+    font-size: 1.75em;
+    line-height: 64px;
+    bottom: 0;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin: 0 0 0 -30px;
+    border-radius: 50%;
+    transform: translate3d(0, 25px, 0);
+    transition-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        opacity: 0;
+        border: 1px solid rgba (255,255,255,0.2);
+        border-radius: 50%;
+    }
+}
+
+.button--animate {
+    .button__content--listen {
+        &::after {
+            animation-delay: 0.6s;
+        }
+        &::before, &::after {
+            animation: anim-ripple 1.2s ease0out infinite forwards;
+        }
+    }
+}
+// Animation right here...
+@-webkit-keyframes anim-ripple {
+    0% {
+        opacity: 0;
+        transform: scale3d(3,3,1);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale3d(1,1,1);
+    }
+}
+@keyframes anim-ripple {
+    0% {
+        opacity: 0;
+        transform: scale3d(3,3,1);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale3d(1,1,1);
+    }
+}
+
+.button--start .button__content--start,
+.button--listen .button__content--listen {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+
+
+// Player right here
+.player {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    transition: opacity 0.5s;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 100%;
+        height: 280px;
+        pointer-events: none;
+        border-radius: 5px 5px 0 0;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+    }
+}
+
+.player--hidden {
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2
+}
+
+.player__cover {
+    margin-top: -1px;
+    border-raduis: 5px 5px 0 0;
+}
+
+.player__meta {
+    padding: 0 1em 1em;
+    text-align: center;
+}
+
+.player__track {
+    font-size: 1.15em;
+    margin: 1.25em 0 0.05em 0;
+    color: #55656c;
+}
+
+.player__album {
+    font-size: 0.825em;
+    margin: 0;
+    color: #bbc1c3;
+}
+
+.player__album-name, .player__artist {
+    color: #adb5b8;
+}
+
+.player__controls {
+    margin: 0 0.85em;
+    padding: 0;
+    vertical-align: middle;
+    color: #adb5b8;
+    border: 0;
+    background:none;
+
+    &:hover, &:focus {
+        color: #00a7e7;
+        outline: none;
+    }
+}
+
+.player__control--play {
+    font-size: 1.75em;
+}
+
+// Notes right here
+.notes {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 50%;
+    width: 100px;
+    height: 60px;
+    margin: 0 0 0 -50px;
+}
+
+.note {
+    font-size: 2.8em;
+    position: absolute;
+    left: 50%;
+    width: 1em;
+    margin: 0 0 0 -0.5em;
+    opacity: 0;
+    color: rgba(255,255,25,0.75);
+
+    &:nth-child(odd) {
+        color: rgba(0,0,0,0.1);
+    }
+
+    &:nth-child(4n) {
+        font-size: 2em;
+    }
+
+    &:nth-child(6n) {
+        color: rgba(255,255,255,0.3);
+    }
+}

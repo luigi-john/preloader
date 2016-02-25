@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Music</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/music.css">
+  <!-- endbuild -->
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+
+</head>
+
+<body>
+  <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="component" data-path-start="..." data-path-listen="..." data-path-player="...">
+    	<!-- SVG with morphing paths and initial start button shape -->
+    	<svg class="morpher" width="300" height="500">
+    		<path class="morph__button" d="..."/>
+    	</svg>
+    	<!-- Initial start button that switches into the recording button -->
+    	<button class="button button--start">
+    		<span class="button__content button__content--start">Listen to this song</span>
+    		<span class="button__content button__content--listen"><span class="icon icon--microphone"></span></span>
+    	</button>
+    	<!-- Music player -->
+    	<div class="player player--hidden">
+    		<img class="player__cover" src="img/Gramatik.jpg" alt="Water 4 The Soul by Gramatik" />
+    		<div class="player__meta">
+    			<h3 class="player__track">Virtual Insight</h3>
+    			<h3 class="player__album">
+    				<span class="player__album-name">Water 4 The Soul</span> by <span class="player__artist">Gramatik</span>
+    			</h3>
+    			<div class="player__controls">
+    				<button class="player__control icon icon--skip-back" aria-label="Previous song"></button>
+    				<button class="player__control player__control--play icon icon--play" aria-label="Play"></button>
+    				<button class="player__control icon icon--skip-next" aria-label="Next song"></button>
+    			</div>
+    		</div>
+    		<button class="button button--close"><span class="icon icon--cross"></span></button>
+    	</div><!-- /player -->
+    </div><!-- /component -->
+
+
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/classie/classie.js"></script>
+    <script src="/bower_components/Snap.svg/dist/snap.svg-min.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+
+
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+    (function(b, o, i, l, e, r) {
+      b.GoogleAnalyticsObject = l;
+      b[l] || (b[l] =
+        function() {
+          (b[l].q = b[l].q || []).push(arguments)
+        });
+      b[l].l = +new Date;
+      e = o.createElement(i);
+      r = o.getElementsByTagName(i)[0];
+      e.src = 'https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+  </script>
+</body>
+
+</html>
